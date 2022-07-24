@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(57, 154, 233);
+}
+
+.cat-button {
+  color: rgb(32, 58, 74);
+  border-radius: 50px;
+  font-family: cursive;
+  font-size: large;
+}
+
+header {
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+  color: rgb(255, 240, 240);
+  font-size: xx-large;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.questions-list {
+  font-weight: bold;
+}
+
+.category-button {
+  width: auto;
+  height: auto;
+  margin: 10px;
+}
+.Categories {
+  text-align: center;
+}
+
+.answer-button {
+  color: rgb(32, 58, 74);
+  border-radius: 50px;
+  font-size: large;
+}
+
+.question-text {
+  color: rgb(32, 58, 74);
+  border-radius: 50px;
+  font-size: x-large;
+}
+
+#root {
+  background-image: url("q.png");
+  text-shadow: 0 0 5px #ff0000;
+  box-shadow: 0.5em 0 0 #ffc107, -0.5em 0 0 #ffc107;
+}
+::selection {
+  background: red;
+}
