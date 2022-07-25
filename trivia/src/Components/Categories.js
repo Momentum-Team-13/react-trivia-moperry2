@@ -7,6 +7,11 @@ function Categories() {
   const [questions, setQuestions] = useState([]);
   const [categorySelected, setCategorySelected] = useState(false);
 
+  function decodeHtml(html) {
+    let txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+  }
   useEffect(() => {
     axios.get(`https://opentdb.com/api_category.php`).then((res) => {
       console.log(res.data);
@@ -55,9 +60,12 @@ function Categories() {
                   return (
                     <Questions
                       questionText={question.question}
+                      {...decodeHtml(question.question)}
                       correctAnswer={question.correct_answer}
+                      {...decodeHtml(question.correct_answer)}
                       key={index}
                       incorrectAnswers={question.incorrect_answers}
+                      {...decodeHtml(question.incorrect_answers)}
                     />
                   );
                 })}
